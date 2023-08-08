@@ -53,13 +53,24 @@ public class QuizService {
     public ResponseEntity<Integer> calculateResult(Integer id, List<Response> responses) {
         Quiz quiz = quizDao.findById(id).get();
         List<Question> questions = quiz.getQuestions();
+        Map<Integer, String> ansMap = new HashMap<>();
+        for(Question qus : questions)
+        {
+            ansMap.put(qus.getId(),qus.getRightAnswer());
+        }
         int right = 0;
-        int i = 0;
+     //   int i = 0;
+        /*By using list if we change the sequence of the response by client then
+        it will not found any match,
+        so we can use <K,V> in hashMap where key is the Id of question and Value is the answer
+        So, if we get response in any sequence it will match right*/
         for(Response response : responses){
-            if(response.getResponse().equals(questions.get(i).getRightAnswer()))
+            if(response.getResponse().equals(ansMap.get(response.getId())))
+                right++;
+            /*if(response.getResponse().equals(questions.get(i).getRightAnswer()))
                 right++;
 
-            i++;
+            i++;*/
         }
         return new ResponseEntity<>(right, HttpStatus.OK);
     }
