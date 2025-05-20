@@ -10,6 +10,9 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+
+// controller for quiz
+
 @RequestMapping("question")
 public class QuestionController {
 
