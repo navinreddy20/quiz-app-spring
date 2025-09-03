@@ -1,6 +1,5 @@
 package com.telusko.quizapp.controller;
 
-import com.telusko.quizapp.model.Question;
 import com.telusko.quizapp.model.QuestionWrapper;
 import com.telusko.quizapp.model.Response;
 import com.telusko.quizapp.service.QuizService;
@@ -11,7 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-// controller for quiz
+// controller for quiz.
 @RestController
 @RequestMapping("quiz")
 public class QuizController {
