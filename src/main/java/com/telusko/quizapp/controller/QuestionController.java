@@ -15,7 +15,7 @@ public class QuestionController {
 
     @Autowired
     QuestionService questionService;
-
+    int xyz = 9;
     @GetMapping("allQuestions")
     public ResponseEntity<List<Question>> getAllQuestions(){
         return questionService.getAllQuestions();
