@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 // controller for quiz
+// controlled by navi
 @RestController
 @RequestMapping("quiz")
 public class QuizController {
