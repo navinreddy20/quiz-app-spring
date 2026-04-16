@@ -11,7 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-// controller for quiz
+// controller class to handle quiz related requests
 @RestController
 @RequestMapping("quiz")
 public class QuizController {
