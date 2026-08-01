@@ -5,6 +5,8 @@ import com.telusko.quizapp.model.QuestionWrapper;
 import com.telusko.quizapp.model.Response;
 import com.telusko.quizapp.service.QuizService;
 
+import lombok.RequiredArgsConstructor;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,10 +15,11 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 // controller for quiz
 @RestController
+@RequiredArgsConstructor
 @RequestMapping("quiz")
 public class QuizController {
 
-    @Autowired
+    
     QuizService quizService;
 
     @PostMapping("create")
