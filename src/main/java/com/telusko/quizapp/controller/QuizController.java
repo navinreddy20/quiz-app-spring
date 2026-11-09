@@ -11,7 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-// controller for quiz
+// Controller for Quiz Where Praksh will play with the code and test it.
 @RestController
 @RequestMapping("quiz")
 public class QuizController {
